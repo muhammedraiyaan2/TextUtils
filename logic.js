@@ -8,6 +8,9 @@ clear.addEventListener("click",function(){
     texta.value=""
 })
 submit.addEventListener("click",function(){
-    text2.innerText=`${texta.value.length} letter, ${texta.value.split(" ").length} words`
+    text2.innerText=`
+    ${texta.value.length} letter
+    ${texta.value.split(" ").length} words
+    ${texta.value.length-texta.value.split(" ").length+1} letters without space`
     document.write(`${toUpperCase(texta.value)}`)
 })

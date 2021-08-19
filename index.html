@@ -9,8 +9,8 @@
     <title>TextUtils</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<body id="body">
+    <nav id="nav" class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">TextUtils</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,12 +29,16 @@
       </nav>
       <!-- textarea -->
       <div class="mb-3 container">
+        <br>
+        <label for="dark">Dark Mode</label>
+        <button id="dark" class="btn btn-primary">On/Off</button><br><br>
         <h1>Enter the word and get count of the word and letter</h1>
         <textarea class="form-control my-4" id="textareas" rows="3" placeholder="Enter the text here..."></textarea>
         <button id="submit" class="btn btn-primary">Submit</button> 
-        <button id="clear" class="btn btn-primary">Clear</button>
+        <button id="case" class="btn btn-primary">Lower Case/ Upper Case</button> 
+        <button id="clear" class="btn btn-primary">Clear Text</button>
         <h3 id="text2"></h3>
-        <h3 id="textup"></h3>
+        <h3 class="text-up" id="textup"></h3>
       </div>
       <script src="logic.js"></script>
 </body>

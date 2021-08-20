@@ -4,6 +4,7 @@ let submit=document.getElementById('submit')
 let clear=document.getElementById('clear')
 let textup=document.getElementById("textup")
 let upcase=document.getElementById("case")
+let copy=document.getElementById("copy")
 // darkmode
 let dark=document.getElementById('dark')
 let body=document.getElementById('body')
@@ -13,6 +14,11 @@ nav.style.color="#212529"
 let text=texta.value
 clear.addEventListener("click",function(){
     texta.value=""
+})
+copy.addEventListener("click",function(){
+    texta.select();
+    texta.setSelectionRange(0, texta.value+1);
+    navigator.clipboard.writeText(texta.value);
 })
 submit.addEventListener("click",function(){
     text2.innerText=`

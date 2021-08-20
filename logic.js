@@ -35,4 +35,5 @@ dark.addEventListener("dblclick",function(){
     body.style.color="#212529"
     body.style.backgroundColor="#fff"
     nav.style.backgroundColor="#f8f9fa"
+    nav.style.color="white"
 })

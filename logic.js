@@ -13,23 +13,33 @@ nav.style.background="#f8f9fa"
 nav.style.color="#212529"
 let text=texta.value
 clear.addEventListener("click",function(){
+    if(texta.value==""){
+        alert("Please Enter the text")
+    }
     texta.value=""
 })
 copy.addEventListener("click",function(){
-    texta.select();
-    texta.setSelectionRange(0, texta.value+1);
     navigator.clipboard.writeText(texta.value);
+    if(texta.value==""){
+        alert("Please Enter the text")
+    }
 })
 submit.addEventListener("click",function(){
     text2.innerText=`
     ${texta.value.length} letter
     ${texta.value.split(" ").length} words
     ${texta.value.length-texta.value.split(" ").length+1} letters without space
-    ${texta.value.split(" ").length-1} spaces`})
+    ${texta.value.split(" ").length-1} spaces`
+    if(texta.value==""){
+        alert("Please Enter the text")
+    }})
 upcase.addEventListener("click",function(){
     textup.innerText=`
     ${texta.value.toUpperCase()} Upper case
     ${texta.value.toLowerCase()} Lower case`
+    if(texta.value==""){
+        alert("Please Enter the text")
+    }
 })
 // darkmode
 dark.addEventListener("click",function(){
